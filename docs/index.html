@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The HatchOut Club — Strangers to Soul Tribe</title>
+  <meta name="description" content="For the young & wild and the old & wise. We curate group trips and custom travel itineraries that turn strangers into a soul tribe." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="16" stroke="#a5b7e5" stroke-width="1.5"/>
+          <path d="M20 8 C20 8 28 16 28 22 C28 28 24 32 20 32 C16 32 12 28 12 22 C12 16 20 8 20 8Z" fill="#a5b7e5" opacity="0.6"/>
+          <path d="M10 20 Q15 17 20 20 Q25 23 30 20" stroke="white" stroke-width="1" fill="none"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span>THE HATCHOUT</span>
+        <span>Club</span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#trips">Trips</a>
+      <a href="#past">Past Journeys</a>
+      <a href="#community">Community</a>
+      <a href="#contact">Join Us</a>
+    </div>
+    <a href="#contact" class="btn-primary nav-cta">Request a Trip</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <p class="mm-label">The HatchOut Club</p>
+  <a href="#about" >About</a>
+  <a href="#trips">Trips</a>
+  <a href="#past">Past Journeys</a>
+  <a href="#community">Community</a>
+  <a href="#contact">Join Us</a>
+  <div class="mm-cta"><a href="#contact">Request a Trip</a></div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="hero">
+  <!-- Background media — replace .vid-placeholder with an <img> or <video> tag -->
+  <div class="hero-bg">
+    <div class="vid-placeholder">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none"><path d="M15 10l4.55-2.28A1 1 0 0121 8.72v6.56a1 1 0 01-1.45.89L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Hero Video / Image</span>
+    </div>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-grain"></div>
+
+  <div class="hero-content container">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Strangers → Soul Tribe
+    </div>
+
+    <h1 class="hero-heading">
+      <span class="line"><span class="line-inner">Travel that</span></span>
+      <span class="line"><span class="line-inner" style="color:#543787;font-style:italic;">changes</span><span class="line-inner"> you.</span></span>
+    </h1>
+
+    <p class="hero-sub">
+      For the young &amp; wild and the old &amp; wise — we curate group journeys that turn strangers into a soul tribe. Not just a trip. A transformation.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#trips" class="btn-primary">Explore Upcoming Trips</a>
+      <a href="#about" class="btn-outline">Our Story</a>
+    </div>
+  </div>
+
+  <!-- Floating stats -->
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Travelers</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">24</div>
+      <div class="stat-label">Trips Curated</div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MARQUEE
+════════════════════════════════════════ -->
+<div id="marquee">
+  <div class="marquee-track">
+    <span>Bali</span><span class="dot">✦</span>
+    <span>Rajasthan</span><span class="dot">✦</span>
+    <span>Santorini</span><span class="dot">✦</span>
+    <span>Spiti Valley</span><span class="dot">✦</span>
+    <span>Vietnam</span><span class="dot">✦</span>
+    <span>Portugal</span><span class="dot">✦</span>
+    <span>Morocco</span><span class="dot">✦</span>
+    <span>Japan</span><span class="dot">✦</span>
+    <span>Peru</span><span class="dot">✦</span>
+    <span>Iceland</span><span class="dot">✦</span>
+    <span>Sri Lanka</span><span class="dot">✦</span>
+    <span>Maldives</span><span class="dot">✦</span>
+    <!-- duplicated for seamless loop -->
+    <span>Bali</span><span class="dot">✦</span>
+    <span>Rajasthan</span><span class="dot">✦</span>
+    <span>Santorini</span><span class="dot">✦</span>
+    <span>Spiti Valley</span><span class="dot">✦</span>
+    <span>Vietnam</span><span class="dot">✦</span>
+    <span>Portugal</span><span class="dot">✦</span>
+    <span>Morocco</span><span class="dot">✦</span>
+    <span>Japan</span><span class="dot">✦</span>
+    <span>Peru</span><span class="dot">✦</span>
+    <span>Iceland</span><span class="dot">✦</span>
+    <span>Sri Lanka</span><span class="dot">✦</span>
+    <span>Maldives</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <span class="section-label">Our Story</span>
+    <div class="about-grid">
+
+      <!-- Left -->
+      <div>
+        <h2 class="about-heading">
+          We're not a travel<br>company.<br>
+          <em>We're a tribe.</em>
+        </h2>
+        <!-- Replace with a real photo -->
+        <div class="about-img">
+          <div class="img-placeholder" style="height:340px;">Community Photo</div>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="about-right">
+        <div class="about-text">
+          <p>The HatchOut Club was born from a simple belief: the best journeys happen when you travel with people who feel like home — even if you just met them yesterday.</p>
+          <p>We curate group trips and custom itineraries designed to crack you open — gently, beautifully. Whether you're 23 and restless or 55 and seeking, our trips are built around shared meals, slow mornings, and the kind of conversations that follow you home.</p>
+          <p>We work on request. We cap group sizes. We choose depth over scale. And we only run trips when the numbers make sense — because every journey deserves the full experience.</p>
+        </div>
+
+        <div class="about-stats">
+          <div>
+            <div class="about-stat-num"><span class="stat-count" data-target="500" data-suffix="+">0+</span></div>
+            <div class="about-stat-label">Souls traveled</div>
+          </div>
+          <div>
+            <div class="about-stat-num"><span class="stat-count" data-target="24" data-suffix="">0</span></div>
+            <div class="about-stat-label">Trips curated</div>
+          </div>
+          <div>
+            <div class="about-stat-num"><span class="stat-count" data-target="14" data-suffix="">0</span></div>
+            <div class="about-stat-label">Countries visited</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Philosophy -->
+    <div class="philosophy-grid">
+      <div class="philosophy-card">
+        <div class="philosophy-icon">○</div>
+        <h3>Community First</h3>
+        <p>Every trip is designed around connection — with the place and the people beside you.</p>
+      </div>
+      <div class="philosophy-card">
+        <div class="philosophy-icon">◇</div>
+        <h3>Curated, Not Packaged</h3>
+        <p>We research every stay, route, and meal. Nothing is default, everything is chosen.</p>
+      </div>
+      <div class="philosophy-card">
+        <div class="philosophy-icon">△</div>
+        <h3>Request-Based</h3>
+        <p>We cap group sizes and only run when the numbers make sense. Your experience is never compromised.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MANIFESTO (Horizontal Scroll)
+════════════════════════════════════════ -->
+<section id="manifesto">
+  <div class="manifesto-intro container">
+    <span class="section-label">Our Manifesto</span>
+    <h2>What we stand for</h2>
+    <p class="manifesto-hint">Scroll to explore &nbsp;→</p>
+  </div>
+
+  <div class="manifesto-pin">
+    <div class="manifesto-track">
+
+      <div class="manifesto-card" style="background:#543787;color:#feb737;">
+        <div>
+          <div class="mc-num" style="color:rgba(254,183,55,0.5)">01</div>
+          <div class="mc-title">For the Young &amp; Wild</div>
+          <div class="mc-text">You have the energy. The hunger. The 2am restlessness that wants to see more, feel more. We take that and channel it into journeys that leave a mark.</div>
+        </div>
+        <div class="mc-footer">
+          <div class="mc-line"></div>
+          <div class="mc-dot" style="color:#feb737;">✦</div>
+        </div>
+      </div>
+
+      <div class="manifesto-card" style="background:#1a1a1a;color:#7cb8c1;">
+        <div>
+          <div class="mc-num" style="color:rgba(124,184,193,0.4)">02</div>
+          <div class="mc-title">For the Old &amp; Wise</div>
+          <div class="mc-text">You've earned your pace. You know what you like, what you won't compromise on, and that the best travel is slow and intentional. We agree.</div>
+        </div>
+        <div class="mc-footer">
+          <div class="mc-line"></div>
+          <div class="mc-dot" style="color:#7cb8c1;">✦</div>
+        </div>
+      </div>
+
+      <div class="manifesto-card" style="background:#2d1a5e;color:#a5b7e5;">
+        <div>
+          <div class="mc-num" style="color:rgba(165,183,229,0.4)">03</div>
+          <div class="mc-title">Strangers Become Tribe</div>
+          <div class="mc-text">By day three, you're finishing each other's sentences. By the last night, you can't imagine not knowing these people. That's not magic — that's design.</div>
+        </div>
+        <div class="mc-footer">
+          <div class="mc-line"></div>
+          <div class="mc-dot" style="color:#a5b7e5;">✦</div>
+        </div>
+      </div>
+
+      <div class="manifesto-card" style="background:#543787;color:#fff4c6;">
+        <div>
+          <div class="mc-num" style="color:rgba(255,244,198,0.4)">04</div>
+          <div class="mc-title">We Work on Request</div>
+          <div class="mc-text">You reach out. We listen. Then we build something specifically for you — your pace, your vibe, your budget, your definition of adventure.</div>
+        </div>
+        <div class="mc-footer">
+          <div class="mc-line"></div>
+          <div class="mc-dot" style="color:#fff4c6;">✦</div>
+        </div>
+      </div>
+
+      <div class="manifesto-card" style="background:#1a1a1a;color:#ff865b;">
+        <div>
+          <div class="mc-num" style="color:rgba(255,134,91,0.4)">05</div>
+          <div class="mc-title">Community Over Commerce</div>
+          <div class="mc-text">We don't chase volume. We protect culture. Small groups, deep connections, trips that feel like you planned them yourself — because in a way, you did.</div>
+        </div>
+        <div class="mc-footer">
+          <div class="mc-line"></div>
+          <div class="mc-dot" style="color:#ff865b;">✦</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     UPCOMING TRIPS
+════════════════════════════════════════ -->
+<section id="trips">
+  <div class="container">
+    <div class="trips-header">
+      <div>
+        <span class="section-label">Where to next</span>
+        <h2>Upcoming Journeys</h2>
+      </div>
+      <div class="trip-filters">
+        <button class="filter-btn active" data-filter="all">All Trips</button>
+        <button class="filter-btn" data-filter="young-wild">Young &amp; Wild</button>
+        <button class="filter-btn" data-filter="old-wise">Old &amp; Wise</button>
+      </div>
+    </div>
+
+    <div class="trips-grid" id="trips-grid"></div>
+    <div id="trips-empty" class="trips-empty" style="display:none;">
+      <h3>No trips in this category yet</h3>
+      <p>Check back soon or request a custom trip</p>
+    </div>
+
+    <div class="trips-footer">
+      <p>Don't see what you're looking for?</p>
+      <a href="#contact" class="btn-outline">Request a Custom Trip</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PAST TRIPS
+════════════════════════════════════════ -->
+<section id="past">
+  <div class="container">
+    <span class="section-label">Where we've been</span>
+    <h2 style="font-size:clamp(36px,4vw,54px);margin-bottom:56px;color:var(--black);">Past Journeys</h2>
+
+    <div class="past-grid">
+      <div class="past-list" id="past-list"></div>
+      <div class="past-preview" id="past-preview"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     COMMUNITY
+════════════════════════════════════════ -->
+<section id="community">
+  <div class="community-bg-stripe"></div>
+  <div class="container" style="position:relative;z-index:2;">
+
+    <div class="community-heading">
+      <span class="section-label">The Tribe Speaks</span>
+      <h2>Strangers who became <em>something more</em></h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">I went as a solo traveler and came back with 15 new best friends. The HatchOut Club doesn't just plan trips — they architect connections.</p>
+        <div class="testi-footer">
+          <div>
+            <div class="testi-name">Priya S.</div>
+            <div class="testi-trip">Bali Soul Immersion, 2024</div>
+          </div>
+          <div class="testi-age">27</div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">At 58, I wasn't sure about group travel. By day two, I was wrong about everything I assumed. This tribe makes you feel exactly the right age.</p>
+        <div class="testi-footer">
+          <div>
+            <div class="testi-name">Rakesh M.</div>
+            <div class="testi-trip">Portugal & The Atlantic, 2024</div>
+          </div>
+          <div class="testi-age">58</div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">The attention to detail is absurd in the best way. Every meal, every moment, every conversation feels like it was meant to happen.</p>
+        <div class="testi-footer">
+          <div>
+            <div class="testi-name">Ananya K.</div>
+            <div class="testi-trip">Vietnam, 2024</div>
+          </div>
+          <div class="testi-age">31</div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-text">Spiti with THC was the trip that broke me open. Cold mountain air, warm hearts, and silence that actually spoke. Nothing like it.</p>
+        <div class="testi-footer">
+          <div>
+            <div class="testi-name">Dev R.</div>
+            <div class="testi-trip">Spiti Valley, 2024</div>
+          </div>
+          <div class="testi-age">34</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Wall -->
+    <div class="photo-wall">
+      <p class="photo-wall-label">Moments from the tribe</p>
+      <div class="photo-wall-grid">
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#2d1a5e,#543787)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#543787,#3d2868)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#3d2868,#2d1a5e)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#1a0f3e,#543787)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#4a2d7a,#2d1a5e)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#2d1a5e,#3d2868)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#543787,#1a0f3e)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#3d2868,#543787)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#2d1a5e,#4a2d7a)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#1a0f3e,#3d2868)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#543787,#2d1a5e)">Photo</div>
+        <div class="img-placeholder" style="background:linear-gradient(135deg,#4a2d7a,#543787)">Photo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left -->
+      <div class="contact-left">
+        <span class="section-label">Let's travel together</span>
+        <h2 class="contact-heading">
+          Tell us where you're <em>craving</em> to go.
+        </h2>
+        <p class="contact-intro">
+          We work on request. Send us your dream, your dates, your vibe — and we'll build something real around it. Whether it's an upcoming group trip or a custom journey, we're here to make it happen.
+        </p>
+
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">hello@thehatchoutclub.com</div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-label">Instagram</div>
+            <div class="contact-info-value">@thehatchoutclub</div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-label">WhatsApp Community</div>
+            <div class="contact-info-value">Request the link in your message</div>
+          </div>
+        </div>
+
+        <div class="contact-tags">
+          <span class="contact-tag">Small groups</span>
+          <span class="contact-tag">Custom itineraries</span>
+          <span class="contact-tag">Real connections</span>
+          <span class="contact-tag">Request-based</span>
+          <span class="contact-tag">All ages</span>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-right">
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name *</label>
+              <input type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" placeholder="you@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" placeholder="+91 98765 43210" />
+          </div>
+          <div class="form-group">
+            <label>I'm interested in *</label>
+            <select required>
+              <option value="">Select an option</option>
+              <option>An upcoming group trip</option>
+              <option>A custom trip / itinerary</option>
+              <option>Both — show me everything</option>
+              <option>Just want to join the community</option>
+            </select>
+          </div>
+
+          <span class="vibe-label">Your travel vibe</span>
+          <div class="vibe-grid">
+            <button type="button" class="vibe-btn">Young &amp; Wild</button>
+            <button type="button" class="vibe-btn">Old &amp; Wise</button>
+            <button type="button" class="vibe-btn">Anywhere, anytime</button>
+            <button type="button" class="vibe-btn">Nature &amp; adventure</button>
+            <button type="button" class="vibe-btn">Culture &amp; history</button>
+            <button type="button" class="vibe-btn">Slow &amp; luxurious</button>
+          </div>
+
+          <div class="form-group">
+            <label>Dream destination / message</label>
+            <textarea rows="4" placeholder="Tell us where your soul wants to go..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%;padding:15px;">Send My Request</button>
+          <p class="form-submit-note">We respond within 48 hours. No spam, ever.</p>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--purple)">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3>You're on our radar.</h3>
+          <p>We'll reach out within 48 hours to talk through your trip. Get ready — something good is coming.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="16" stroke="#a5b7e5" stroke-width="1.5"/>
+              <path d="M20 8 C20 8 28 16 28 22 C28 28 24 32 20 32 C16 32 12 28 12 22 C12 16 20 8 20 8Z" fill="#a5b7e5" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="nav-logo-text">
+            <span>THE HATCHOUT</span>
+            <span>Club</span>
+          </div>
+        </div>
+        <p class="footer-tagline">For the young &amp; wild and the old &amp; wise. Curating group journeys that turn strangers into a soul tribe since 2022.</p>
+        <div class="footer-socials">
+          <a href="#">Instagram</a>
+          <a href="#">WhatsApp</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="#about">About</a>
+        <a href="#trips">Upcoming Trips</a>
+        <a href="#past">Past Journeys</a>
+        <a href="#community">Community</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.html">Admin</a>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Stay in the loop</h4>
+        <p>New trips, trip reports, and the occasional love letter from the road.</p>
+        <div class="newsletter-input">
+          <input type="email" placeholder="your@email.com" />
+          <button>→</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 The HatchOut Club. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Refund Policy</a>
+      </div>
+      <p class="footer-slogan">Strangers → Soul Tribe</p>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
